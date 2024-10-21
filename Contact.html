@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>EduInspire Hackathon</title>
+    <link rel="shortcut icon" type="image/png" href="hack.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="hack_style.css">
+    <link rel="stylesheet" href="hack_script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+    <div class="navbar" id="navbar">
+      <div class="logo">
+        <img src="hack.png" class="hack_img">
+      </div>
+      <div class="nav-links">
+        <a href="website.html">Home</a>
+        <a href="about_hack.html">About</a>
+        <a href="selected_team.html">Shortlisted Teams  <span style="color: #ff4081;"><i class="fa fa-certificate" aria-hidden="true"></i></span></a>
+        <a href="Contact.html">Contact</a>
+        <a href="FAQ_hack.html">FAQ</a>
+      </div>
+    </div>
+
+   
+    <div class="container top_topic">
+      <h1>Contact </h1>
+      <h1>Co-ordinators</h1>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Email Id</th>
+          <th>Phone No</th>
+        </tr>
+        <tr><td colspan="3">Teacher</td></tr>
+        <tr>
+          <td>John Doe</td>
+          <td>johndoe@example.com</td>
+          <td>1234567890</td>
+        </tr>
+        <tr>
+          <td>Jane Doe</td>
+          <td>janedoe@example.com</td>
+          <td>9876543210</td>
+        </tr>
+        <tr><td colspan="3">Student</td></tr>
+        <tr>
+          <td>John Doe</td>
+          <td>johndoe@example.com</td>
+          <td>1234567890</td>
+        </tr>
+        <tr>
+          <td>Jane Doe</td>
+          <td>janedoe@example.com</td>
+          <td>9876543210</td>
+        </tr>
+      </table>
+      </div>
+    </div>
+    <div class="particles"></div>
+    <div class="star-background"></div>
+  </body>
+  <style>
+
+       body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #0d0d2b, #000000);
+  color: white;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C0C27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4081;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e00070;
+}
+
+.navbar {
+  position: fixed;
+  top: 40px; /* Added more margin-top */
+  left: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  margin: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  align-items: center;
+  transition: background 0.3s, color 0.1s, top 0.3s, left 0.3s, right 0.3s, padding 0.3s, margin 0.3s, box-shadow 0.3s;
+  z-index: 1000;
+}
+
+.navbar.sticky {
+  background: #0C0C27;
+  color: #ff4081;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* White shadow */
+}
+table, th, td {
+  border: 1px solid #ff2377;
+  border-collapse: collapse;
+}
+th, td{
+  padding: 15px;
+}
+th{color:#ff2377}
+.navbar a {
+  color: inherit; /* Use inherit to ensure color change on scroll */
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+.navbar a:hover{
+  border: none !important;
+  border-bottom:2px solid #ff2377 !important;
+  width: 5px !important;
+  font-size: 25px !important;
+}
+.container {
+    height: 100vh;
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 45vh;
+}
+
+.container:nth-child(odd) {
+    background: none;
+}
+.hack_img {
+    width: 85px;
+    height: 65px;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.top_topic{
+  margin-top:70vh;margin-bottom:45vh;height:0vh !important;
+}
+.particles {
+  position: fixed; /* Changed to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; /* Ensure particles are below content */
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 5px 1px white;
+  animation: float 10s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(calc(-50vw + 100%));
+    opacity: 0;
+  }
+}
+
+/* Small stars background */
+.star-background {
+  position: fixed; /* Changed to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 0; /* Ensure star background is below everything */
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  opacity: 0.8;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.logos img {
+  max-width: 100px;
+  margin: 20px;
+}
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid #e00070;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #e00070;
+  opacity: .3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+}
+
+.hover {
+  background-color: #e00070;
+  opacity: 0.5;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
+}
+  </style>
+  <script>
+    window.onscroll = function() {stickNavbar()};
+
+const navbar = document.getElementById("navbar");
+const sticky = navbar.offsetTop;
+
+function stickNavbar() {
+ if (window.pageYOffset > sticky) {
+   navbar.classList.add("sticky");
+ } else {
+   navbar.classList.remove("sticky");
+ }
+}
+
+const particleContainer = document.querySelector('.particles');
+const starBackground = document.querySelector('.star-background');
+
+for (let i = 0; i < 100; i++) {
+ const particle = document.createElement('div');
+ particle.classList.add('particle');
+ particle.style.top = `${Math.random() * 100}vh`;
+ particle.style.left = `${Math.random() * 100}vw`;
+ particle.style.animationDelay = `${Math.random() * 10}s`;
+ particleContainer.appendChild(particle);
+}
+
+for (let i = 0; i < 300; i++) {
+ const star = document.createElement('div');
+ star.classList.add('star');
+ star.style.top = `${Math.random() * 100}vh`;
+ star.style.left = `${Math.random() * 100}vw`;
+ starBackground.appendChild(star);
+}
+
+ </script>
+ <script>
+   var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+ var x = e.clientX;
+ var y = e.clientY;
+ cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+ var x = e.clientX;
+ var y = e.clientY;
+ cursorinner.style.left = x + 'px';
+ cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+ cursor.classList.add('click');
+ cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+ cursor.classList.remove('click')
+ cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+ item.addEventListener('mouseover', () => {
+   cursor.classList.add('hover');
+ });
+ item.addEventListener('mouseleave', () => {
+   cursor.classList.remove('hover');
+ });
+})
+ </script>
+</html>
